@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram bot 'ya_perezvonu'
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=<username>
+WorkingDirectory=/home/admin/ya_perezvonu
+ExecStart=/usr/bin/python /home/<username>/ya_perezvonu/ya_perezvonu.py
+RestartSec=10
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
